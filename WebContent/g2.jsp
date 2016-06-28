@@ -7,23 +7,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-본문영역<br>
+<% 
 
+int sum2 = (int) request.getAttribute("sum"); //반환 받을때는 무조건 object 이기 때문에 캐스팅 해줘야 함
 
-<%
-	int num2 = 20;
 %>
 
-==================<br>
-<%--@ include file = "d2.jsp" --%>
-<%-- <jsp:include page="d2.jsp"></jsp:include> --%>
-
-<%
-	RequestDispatcher dispatcher = request.getRequestDispatcher("d2.jsp");
-	dispatcher.include(request, response);
-%>
-
-==================<br>
-
+	합계 1 : <%=sum2%><br>
+	합계 2 : ${sum}<br>
+	
+	num1 : <%=request.getParameter("num1") %><br>
+	num2 : ${param.num2}<br>
 </body>
 </html>

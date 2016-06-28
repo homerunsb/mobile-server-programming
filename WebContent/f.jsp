@@ -7,23 +7,24 @@
 <title>Insert title here</title>
 </head>
 <body>
-본문영역<br>
 
+<%! 
+	int cnt = 0;
+	void aa(JspWriter out){
+		try{
+			out.println("korea");
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+%>
+JSP 선언예제<br>
 
 <%
-	int num2 = 20;
+	cnt++;
+	out.println("asdasdasd");
 %>
 
-==================<br>
-<%--@ include file = "d2.jsp" --%>
-<%-- <jsp:include page="d2.jsp"></jsp:include> --%>
-
-<%
-	RequestDispatcher dispatcher = request.getRequestDispatcher("d2.jsp");
-	dispatcher.include(request, response);
-%>
-
-==================<br>
-
+cnt : <%=cnt %>
 </body>
 </html>

@@ -7,23 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-본문영역<br>
-
-
-<%
-	int num2 = 20;
-%>
-
-==================<br>
-<%--@ include file = "d2.jsp" --%>
-<%-- <jsp:include page="d2.jsp"></jsp:include> --%>
-
-<%
-	RequestDispatcher dispatcher = request.getRequestDispatcher("d2.jsp");
-	dispatcher.include(request, response);
-%>
-
-==================<br>
-
+	<table border = "1">
+				<%
+					for(int i = 0; i < 10; i++){
+				%>
+						<tr><td>값 :  <%=i %> </td></tr>
+				<%
+					}
+				%>
+	</table>
 </body>
 </html>
